@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-
 import ShowProfile from "./ShowProfile.jsx";
 import AboutMe from "./AboutMe.jsx";
 import MyProjects from "./MyProjects.jsx";
