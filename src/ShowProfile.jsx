@@ -1,12 +1,12 @@
 export default function ShowProfile() {
     return (
-        <div className="card sigil">
-            <h1>Welcome to my Profile</h1>
+        <div className="card">
+            <h1>About Me</h1>
             <img src="/img/Me.jpeg" alt="My Profile" className="avatar" />
             <p className="muted">
-                Hello, dear friend! Welcome to my resume website.
-                Here you can get to know me better and see my professional experience.
-                Hope you enjoy :)
+                Hi, I'm Kirill, 28 years old, living in Giv'at Avni.
+                I serve as a reserve officer in the IDF Ordnance Corps, specializing in technology, maintenance, and operational systems.
+                Currently, I work as a PDM specialist at QMD and study Software Practical Engineering.
             </p>
         </div>
     );

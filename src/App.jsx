@@ -8,7 +8,7 @@ import "./index.css";
 function App() {
     return (
         <BrowserRouter>
-            <nav style={{ display: "flex", gap: "20px", marginBottom: "20px" }}>
+            <nav className="nav">
                 <Link to="/">Home</Link>
                 <Link to="/aboutMe">About Me</Link>
                 <Link to="/myprojects">My Projects</Link>
@@ -24,5 +24,4 @@ function App() {
         </BrowserRouter>
     );
 }
-
 export default App

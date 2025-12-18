@@ -11,7 +11,7 @@ export default function AboutMe() {
                 My main responsibilities include mechanical design and drafting in SolidWorks, working with the Priority ERP system, and occasionally using Adobe Illustrator.<br /><br />
                 Alongside my job, I am studying Software Practical Engineering.
                 I have completed projects using Node.js, Arduino, and JavaScript.
-                You can find the projects I worked on in my Projects page.
+                You can find the projects I worked on in "My Projects" page.
             </p>
         </div>
     );

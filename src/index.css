@@ -1,192 +1,135 @@
-/* ===== Slytherin Theme Variables ===== */
 :root {
   --bg: #0f1115;
-  --bg-alt: #151820;
   --text: #e6e6e6;
-  --muted: #b8bcc6;
-  --emerald: #1e7b57;      /* Slytherin green */
-  --emerald-dark: #155941;
-  --silver: #cfd2d6;
-  --accent: #49a67c;       /* brighter highlight */
+  --emerald: #1e7b57;   /* ירוק סלית'רין */
+  --silver: #cfd2d6;    /* כסף */
   --shadow: rgba(0, 0, 0, 0.35);
-
-  --radius: 14px;
-  --radius-sm: 10px;
-  --ring: 1px solid rgba(255, 255, 255, 0.08);
+  --radius: 12px;
 }
 
-/* ===== Global Reset & Base ===== */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  background: radial-gradient(1200px at 50% -100px, #182026 25%, var(--bg) 70%);
+body {
+  margin: 0;
+  background: var(--bg);
   color: var(--text);
   font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
-  margin: 0;
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-a:hover {
-  color: #6fc39c;
-  text-shadow: 0 0 6px rgba(73,166,124,0.5);
 }
 
 #root {
-  max-width: 1080px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 4rem;
+  padding: 2rem;
 }
 
-/* ===== Magical Top Border Glow ===== */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-          radial-gradient(600px 140px at 50% 0%, rgba(73,166,124,0.25), transparent 60%),
-          radial-gradient(900px 200px at 50% -60px, rgba(21,89,65,0.25), transparent 70%);
-  mix-blend-mode: screen;
-}
-
-/* ===== Navigation ===== */
+/* ===== ניווט ===== */
 .nav {
   display: flex;
-  gap: 18px;
-  align-items: center;
+  gap: 20px;
   justify-content: center;
-  padding: 12px 20px;
-  margin-bottom: 24px;
-  backdrop-filter: blur(6px);
-  background: linear-gradient(180deg, rgba(21,89,65,0.25), rgba(21,89,65,0.1));
-  border: var(--ring);
+  margin-bottom: 30px;
+  padding: 12px;
+  background: rgba(30, 123, 87, 0.2);
   border-radius: var(--radius);
-  box-shadow: 0 10px 30px var(--shadow);
+  box-shadow: 0 6px 20px var(--shadow);
 }
 
 .nav a {
-  padding: 8px 14px;
-  border-radius: var(--radius-sm);
-  color: var(--text);
-  transition: 180ms ease;
-}
-.nav a:hover {
-  background: rgba(30,123,87,0.18);
-  box-shadow: inset 0 0 0 1px rgba(207,210,214,0.25), 0 6px 18px rgba(30,123,87,0.25);
+  color: var(--silver);
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  transition: 0.2s;
 }
 
-/* ===== Headings ===== */
-h1 {
-  font-size: 2.6rem;
-  line-height: 1.1;
-  letter-spacing: 0.5px;
-  margin: 0 0 16px;
-  color: var(--silver);
-  text-shadow: 0 0 12px rgba(207,210,214,0.25);
-  position: relative;
+.nav a:hover {
+  background: var(--emerald);
+  color: #fff;
 }
-h1::after {
-  content: "";
-  display: block;
-  width: 90px;
-  height: 3px;
-  background: linear-gradient(90deg, var(--emerald), var(--silver));
-  border-radius: 2px;
-  margin-top: 12px;
+
+/* ===== כותרות ===== */
+h1 {
+  color: var(--silver);
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 h3 {
-  color: var(--muted);
-  margin: 18px 0 10px;
+  color: var(--emerald);
 }
 
-/* ===== Card layout ===== */
+/* ===== כרטיסים ===== */
 .card {
-  background: linear-gradient(180deg, rgba(21,24,32,0.95), rgba(15,17,21,0.85));
-  border: var(--ring);
+  background: rgba(21, 24, 32, 0.9);
   border-radius: var(--radius);
   padding: 20px;
-  box-shadow: 0 14px 40px var(--shadow);
+  margin-bottom: 20px;
+  box-shadow: 0 8px 24px var(--shadow);
 }
 
-.grid {
-  display: grid;
-  gap: 18px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-/* ===== Buttons (Spell-like) ===== */
-.button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  border-radius: var(--radius-sm);
-  color: var(--text);
-  background: linear-gradient(180deg, var(--emerald), var(--emerald-dark));
-  border: 1px solid rgba(207,210,214,0.25);
-  box-shadow: 0 10px 24px rgba(30,123,87,0.35);
-  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
-}
-.button:hover {
-  transform: translateY(-2px);
-  filter: brightness(1.05);
-  box-shadow: 0 16px 34px rgba(73,166,124,0.4);
-}
-
-/* ===== Image / Avatar ===== */
+/* ===== תמונה ===== */
 .avatar {
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid rgba(207,210,214,0.4);
-  box-shadow: 0 18px 40px var(--shadow), inset 0 0 30px rgba(73,166,124,0.15);
+  border: 3px solid var(--emerald);
+  box-shadow: 0 10px 30px var(--shadow);
+  display: block;
+  margin: 0 auto 20px;
 }
 
-/* ===== Slytherin snake motif (subtle) ===== */
-.sigil {
-  position: relative;
-  isolation: isolate;
-}
-.sigil::before {
-  content: "";
-  position: absolute;
-  inset: -8px;
-  z-index: -1;
-  border-radius: var(--radius);
-  background:
-          radial-gradient(240px 120px at 20% 20%, rgba(73,166,124,0.18), transparent 40%),
-          radial-gradient(320px 140px at 80% 70%, rgba(207,210,214,0.12), transparent 50%);
-  opacity: 0.9;
-}
-
-/* ===== Project links ===== */
-.project a {
-  font-weight: 600;
-  color: var(--silver);
-}
-.project a:hover {
-  color: #e9ecf0;
-}
-
-/* ===== Small text ===== */
+/* ===== טקסט ===== */
 .muted {
-  color: var(--muted);
+  color: #b8bcc6;
+  text-align: center;
+}
+.project-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-/* ===== Responsive tweaks ===== */
-@media (max-width: 600px) {
-  h1 { font-size: 2.2rem; }
-  .avatar { width: 180px; height: 180px; }
-  .nav { gap: 12px; }
+.project-card {
+  background: linear-gradient(180deg, rgba(21,24,32,0.95), rgba(15,17,21,0.85));
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(30,123,87,0.45);
+}
+
+.project-card h3 {
+  margin: 0 0 10px;
+  color: #1e7b57; /* ירוק סלית'רין */
+}
+
+.project-card p {
+  flex-grow: 1;
+  color: #b8bcc6;
+  margin-bottom: 16px;
+}
+
+.project-card .btn {
+  background: linear-gradient(180deg, #1e7b57, #155941);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.project-card .btn:hover {
+  background: #49a67c;
 }
