@@ -1,13 +1,13 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { HashRouter, Routes, Route, Link } from "react-router-dom";
 import ShowProfile from "./ShowProfile.jsx";
 import AboutMe from "./AboutMe.jsx";
 import MyProjects from "./MyProjects.jsx";
-import MyContacts from "./myContacts.jsx";
+import MyContacts from "./MyContacts.jsx";
 import "./index.css";
 
 function App() {
     return (
-        <BrowserRouter>
+        <HashRouter>
             <nav className="nav">
                 <Link to="/">Home</Link>
                 <Link to="/aboutMe">About Me</Link>
@@ -21,7 +21,7 @@ function App() {
                 <Route path="/myprojects" element={<MyProjects />} />
                 <Route path="/mycontacts" element={<MyContacts />} />
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
-export default App
+export default App;
