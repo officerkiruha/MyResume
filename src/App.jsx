@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ShowProfile from "./ShowProfile.jsx";
 import AboutMe from "./AboutMe.jsx";
 import MyProjects from "./MyProjects.jsx";
-import MyContacts from "./MyContacts.jsx";
+import MyContacts from "./myContacts.jsx";
 import "./index.css";
 
 function App() {
