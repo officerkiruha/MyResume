@@ -84,6 +84,7 @@ h3 {
   color: #b8bcc6;
   text-align: center;
 }
+
 .project-grid {
   display: grid;
   gap: 20px;
@@ -132,4 +133,31 @@ h3 {
 
 .project-card .btn:hover {
   background: #49a67c;
+}
+
+/* ===== התאמה למובייל (Mobile Responsiveness) ===== */
+@media (max-width: 600px) {
+  /* הקטנת השוליים הכלליים כדי לתת יותר מקום לתוכן */
+  #root {
+    padding: 1rem;
+  }
+
+  /* סידור התפריט כך שיוכל לרדת שורה אם אין מספיק מקום */
+  .nav {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  /* הקטנה עדינה של הטקסט בתפריט */
+  .nav a {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  /* התאמת גודל תמונת הפרופיל למסך קטן */
+  .avatar {
+    width: 150px;
+    height: 150px;
+  }
 }
